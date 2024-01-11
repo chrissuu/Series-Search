@@ -16,9 +16,10 @@ iii) $S'$ is an undercompensate of $S$ if there exists a term $\Delta_k \neq \De
 
 iv) $S'$ is an overcompensate of $S$ if there exists a term $\Delta_i' \neq \Delta_k$, for all appropriate terms in $S$, $\Delta_k$. We denote this with $S \sqsupset S'$
 
+
 v) $S'$ is said to be **total** to $S$ if $Ord(Abs(S')) = Ord(Abs(S))$ We denote this with $S \equiv S'$. Considering the sums of the respective series are absolutely convergent, one can see that the OrdAbs operator on $S'$ and $S$ is purely a formality, and not necessary. $S'$ is said to be **equal** to $S$ if and only if $S' \equiv S$ and $\delta' = \delta$
 
-
+##### Note:  one may rewrite the above definitions in the language of functions, that is through injections, surjections, and bijections on the set of terms $\{x | x = \delta_n\}$ and $\{x | x = \delta_n'\}$
 
 -Abuse of Notation-
 
@@ -46,13 +47,9 @@ Given a series, $S$ $(=\Delta_n)$, $S$ may be decomposed into a partition $\math
 
 ##### Example 
 
-Consider a geometric series, $G$, given by 
+Consider a geometric series, $G$, given by $ G = \sum_{n=1}^{\infty} (\frac{1}{3})^{n-1} $
 
-\[ G = \sum_{n=1}^{\infty} (\frac{1}{3})^{n-1} \]
-
-We may write out a few terms:
-
-\[1, \frac{1}{3}, \frac{1}{9}, \frac{1}{27}... \]
+We may write out a few terms: $1, \frac{1}{3}, \frac{1}{9}, \frac{1}{27}... $
 
 A valid partition for G is given by:
 
@@ -60,6 +57,9 @@ $\mathcal{A} = \{A_1, A_2\}$, where $A_1 = \sum_{n=0}^{\infty} (\frac{1}{3})^{2n
 
 Encoded as: $\text{Enc}(\mathcal{A}) = \mathcal{Z} = \{(1, \mathcal{T}_0(s) = \frac{1}{9}s, |\mathbb{N}|),(\frac{1}{3}, \mathcal{T}_1(s) = \frac{1}{9}s, |\mathbb{N}|) \}$
 
-#### Dynamic Dictionary and Series Searching
+#### Series Searching
 
-Given a dictionary $\mathcal{D}$, 
+##### Theorem 1.1
+Let $S$ be an absolutely convergent series with term $\Delta_n$.
+
+Let $\mathcal{U}$ be the set of all absolutely converging series with term $u_{i_n} \in \mathcal{U}$. Let $\mathcal{P}$ be the set of all encodings of series in the partitions of $\mathcal{U}$. Construct a directed complete graph where $G = (U, V)$, where the set of vertices, $V = \{p \in P\}$. A set $P \subseteq \mathcal{P}$ is said to $complete$ $S$ if there exists 
